@@ -25,5 +25,9 @@ int main()
 			printf("%d ",*(p+i));
 		}   
 	 }
+	 //当动态申请的空间不再使用的时候
+	 //就应该还给操作系统
+	 free(p);
+	 p = NULL; 
 	 return 0;
 }
